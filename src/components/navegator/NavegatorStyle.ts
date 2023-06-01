@@ -13,9 +13,9 @@ export const NavegatorBox = styled.nav`
     right: 0;
     top: 0px;
     background: linear-gradient(
-      ${Color.background},
-      ${Color.background}bf,
-      ${Color.background}80,
+      #${Color.background},
+      #${Color.background}bf,
+      #${Color.background}80,
       transparent
     );
     transition: top 0.25s ease-out;
@@ -58,7 +58,7 @@ export const NavegatorBox = styled.nav`
     padding: 0;
     cursor: pointer;
     &:hover {
-      filter: drop-shadow( 0 0 1.5em ${Color.active});
+      filter: drop-shadow( 0 0 1.5em #${Color.active});
     }
   }
 
@@ -66,19 +66,19 @@ export const NavegatorBox = styled.nav`
     display: flex;
     align-items: center;
     &:hover {
-      filter: drop-shadow( 0 0 1.5em ${Color.active});
+      filter: drop-shadow( 0 0 1.5em #${Color.active});
     }
   }
 
   .title {
     transition: color 0.15s ease-in-out;
     margin: 0;
-    color: ${Color.primaryLight};
+    color: #${Color.primaryLight};
   cursor: pointer;
   font-size: ${FontSize.littleSubTitle1};
   }
   .title:hover {
-    color: ${Color.active};
+    color: #${Color.active};
   }
 .logo-img{
   filter: saturate(0);
@@ -87,7 +87,7 @@ export const NavegatorBox = styled.nav`
   .icon-li {
     cursor: pointer;
     display: flex;
-    color: ${Color.primary};
+    color: #${Color.primary};
     align-items: center;
     justify-content: center;
     margin: 0;

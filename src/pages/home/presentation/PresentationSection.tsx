@@ -13,9 +13,12 @@ const PresentationSection = () => {
     
     return (
         <PresentationBox>
-            {/*<BannerComponent items={PresentationItems}/>
-            <SlideModernComponent items={PresentationItems}/>*/}
+            {/*<SlideModernComponent items={PresentationItems}/>
             <SlideTestComponent items={PresentationItems}/>
+            */}
+            <BannerComponent items={PresentationItems}/>
+            
+    
         </PresentationBox>
     )
 }

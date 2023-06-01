@@ -14,7 +14,7 @@ const SlideModernComponent = (props: Props) => {
     useEffect(() => {
         const interval = setInterval(() => {
             selectedNewItem(selectedIndex, props.items)
-        }, 4500)
+        }, 5500)
         return () => {
             clearInterval(interval)
         }
@@ -66,34 +66,40 @@ const SlideModernComponent = (props: Props) => {
     }
     return (
         <SlideModernBox>
-            <img className='item-backimage' src={selectedItem.backimage} />
+            <div>
+                <img className='item-backimage' src={selectedItem.backimage} />
 
-            <div className='slide-container'>
-                <div className={`item-frontimage-container ${loaded ? "loaded" : ""}`}>
-                    <img
-                        src={selectedItem.backimage}
-                        className='item-frontimage'
-                        onLoad={() => setLoaded(true)} />
-                </div>
-                <div className={`item-title-variant ${loaded ? "loaded" : ""}`}>
-                    {selectedItem.title}
-                </div>
-                <div className={`item-image2-container ${loaded ? "loaded" : ""}`}>
-                    <img
-                        src={selectedItem.logo}
-                        className='item-image2'
-                        onLoad={() => setLoaded(true)} />
-                </div>
-
-                <div className={`item-info ${loaded ? "loaded" : ""}`}>
-                    <div className={`item-item ${loaded ? "loaded" : ""}`}>{selectedItem.item}</div>
-                    <div className={`item-title ${loaded ? "loaded" : ""}`}>{selectedItem.title}</div>
-                    <div className={`item-description ${loaded ? "loaded" : ""}`}>{selectedItem.description}</div>
-                    <div className='item-button-container'>
-                        <button className={`item-button ${loaded ? "loaded" : ""}`}>Ver Más</button>
+                <div className='slide-container'>
+                    <div className={`item-frontimage-container ${loaded ? "loaded" : ""}`}>
+                        <img
+                            src={selectedItem.backimage}
+                            className='item-frontimage'
+                            onLoad={() => setLoaded(true)} />
                     </div>
+                    <div className={`item-title-variant ${loaded ? "loaded" : ""}`}>
+                        {selectedItem.title}
+                    </div>
+                    <div className={`item-logo-container ${loaded ? "loaded" : ""}`}>
+                        <img
+                            src={selectedItem.logo}
+                            className='item-logo'
+                            onLoad={() => setLoaded(true)} />
+                    </div>
+
+                    <div className={`item-info ${loaded ? "loaded" : ""}`}>
+                        <div className={`item-item ${loaded ? "loaded" : ""}`}>{selectedItem.item}</div>
+                        <div className={`item-title ${loaded ? "loaded" : ""}`}>{selectedItem.title}</div>
+                        <div className={`item-description ${loaded ? "loaded" : ""}`}>{selectedItem.description}</div>
+                        <div className='item-button-container'>
+                            <button className={`item-button ${loaded ? "loaded" : ""}`}>Ver Más</button>
+                        </div>
+                    </div>
+
                 </div>
+                <div className="untitled__shutters"></div>
+
             </div>
+
 
         </SlideModernBox>
     )
