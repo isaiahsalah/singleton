@@ -1,6 +1,4 @@
 import { useEffect, useState } from 'react'
-
-import img3 from '../../assets/images/imagen3.jpg'
 import { BannerBox } from './BannerStyle';
 
 interface Props {
@@ -66,23 +64,22 @@ const BannerComponent = (props: Props) => {
     }
     return (
         <BannerBox>
-            <img className='background-image' src={img3} />
+
 
             <div className='slide-container'>
-                <div className={`item-image-container ${loaded ? "loaded" : ""}`}>
+                <div className={`item-backimage-container ${loaded ? "loaded" : ""}`}>
                     <img
                         src={selectedItem.backimage}
-                        id='item-image'
-                        className='item-image'
+                        className='item-backimage'
                         onLoad={() => setLoaded(true)} />
                 </div>
                 <div className={`item-title-variant ${loaded ? "loaded" : ""}`}>
                     {selectedItem.title}
                 </div>
-                <div className={`item-image2-container ${loaded ? "loaded" : ""}`}>
+                <div className={`item-logo-container ${loaded ? "loaded" : ""}`}>
                     <img
                         src={selectedItem.logo}
-                        className='item-image2'
+                        className='item-logo'
                         onLoad={() => setLoaded(true)} />
                 </div>
 

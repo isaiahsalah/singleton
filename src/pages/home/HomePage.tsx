@@ -18,7 +18,7 @@ import FooterComponent from '../../components/footer/FooterComponent'
 const HomePage = () => {
   return (
     <HomeBox>
-      {/*<BackgroundImageComponent/>*/}
+      <BackgroundImageComponent/>
       <ContactComponent SocialMedia={SocialMedia}/>
       <NavegatorComponent />
       <PresentationSection />

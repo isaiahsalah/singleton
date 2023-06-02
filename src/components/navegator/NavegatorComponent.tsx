@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { NavegatorBox } from './NavegatorStyle'
-import singletonLogo from '../../assets/react.svg'
+import singletonLogo from '../../assets/svgs/logo.svg'
 
 const NavegatorComponent = () => {
 

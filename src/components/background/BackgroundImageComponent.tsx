@@ -1,11 +1,12 @@
 import React from 'react'
-import img3 from '../../assets/images/imagen3.jpg'
 import { BackgroundBox } from './BackgroundImageStyle'
+import svg from '../../assets/svgs/fondo.svg'
+
 
 const BackgroundImageComponent = () => {
     return (
         <BackgroundBox>
-            <img className='background-image' src={img3} />
+            <img className='background-image' src={svg} />
 
         </BackgroundBox>
     )

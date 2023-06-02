@@ -10,8 +10,8 @@ export const GlobalStyle = createGlobalStyle`
   font-weight: 400;
 
   color-scheme: light dark;
-  color: #${Color.light};
-  background-color: #${Color.background};
+  color: ${Color.light};
+  background-color: ${Color.background};
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -34,7 +34,7 @@ a {
   text-decoration: inherit;
 }
 a:hover {
-  color: #${Color.active};
+  color: ${Color.active};
 }
 
 body {
@@ -57,15 +57,17 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #${Color.light};
+  background-color: ${Color.light};
+  color: ${Color.background};
+
   cursor: pointer;
   transition: 0.25s;
 }
 button:hover {
-  background-color: #${Color.active};
-  color: #${Color.background};
+  background-color: ${Color.active};
+  color: ${Color.background};
 
-  border-color: #${Color.active};
+  border-color: ${Color.active};
 }
 button:focus,
 button:focus-visible {
