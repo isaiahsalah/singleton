@@ -1,11 +1,19 @@
 import img1 from '../assets/images/img-01.jpg'
 import img2 from '../assets/images/img-02.jpg'
 import img3 from '../assets/images/img-03.jpg'
-import { RiCodepenFill, RiGithubFill, RiLinkedinFill, RiTwitterFill, RiWhatsappFill } from "react-icons/ri"
+import { 
+  RiCodepenFill, 
+  RiFacebookBoxFill, 
+  RiGithubFill, 
+  RiLinkedinFill, 
+  RiTwitterFill, 
+  RiWhatsappFill, 
+  RiYoutubeFill
+} from "react-icons/ri"
 
 export const Color = {
   primary: '#475A71',
-  active: '#FFAF55',
+  active: '#FF852E',
   alternative: '#C55428',
   //secondary: '#015270',
   background: '#1F1F1F',
@@ -57,23 +65,23 @@ export const SocialMedia =[
 },
 {
     title: "Linkedin",
-    link: "https://www.linkedin.com/in/isaiahsalah/",
+    link: "https://www.linkedin.com/in/",
     icon: RiLinkedinFill
 },
 {
     title: "Twitter",
-    link: "https://twitter.com/isaiahSalah",
+    link: "https://twitter.com/",
     icon: RiTwitterFill
 },
 {
-    title: "CodePen",
-    link: "https://codepen.io/isaiahsalah",
-    icon: RiCodepenFill
+    title: "Facebook",
+    link: "https://codepen.io/",
+    icon: RiFacebookBoxFill
 },
 {
-    title: "Github",
-    link: "https://github.com/isaiahsalah",
-    icon: RiGithubFill
+  title: "Youtube",
+  link: "https://codepen.io/",
+  icon: RiYoutubeFill
 }
 ]
 
@@ -116,18 +124,96 @@ export const ProductsList = [
     item: 'General',
     description: 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) ',
     image: img1,
+    modules: [
+      {
+        title: 'modulo1',
+        description: 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor',
+        image: img2,
+        color: '#a02727',
+      },
+      {
+        title: 'modulo1',
+        description: 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor',
+        image: img2,
+        color: '#a02727',
+      },
+      {
+        title: 'modulo1',
+        description: 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor',
+        image: img2,
+        color: '#a02727',
+      },
+      {
+        title: 'modulo1',
+        description: 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor',
+        image: img2,
+        color: '#a02727',
+      },
+      {
+        title: 'modulo1',
+        description: 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor',
+        image: img2,
+        color: '#a02727',
+      },
+      {
+        title: 'modulo1',
+        description: 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor',
+        image: img2,
+        color: '#a02727',
+      },
+    ],
   },
   {
     title: 'Sigma',
     item: 'Farmacias',
     description: 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) ',
     image: img2,
+    modules: [
+      {
+        title: 'modulo1',
+        description: 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor',
+        image: img2,
+        color: '#a02727',
+      },
+      {
+        title: 'modulo1',
+        description: 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor',
+        image: img2,
+        color: '#a02727',
+      },
+      {
+        title: 'modulo1',
+        description: 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor',
+        image: img2,
+        color: '#a02727',
+      },
+    ],
   },
   {
     title: 'Horus',
     item: 'Transporte',
     description: 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) ',
     image: img3,
+    modules: [
+      {
+        title: 'modulo1',
+        description: 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor',
+        image: img2,
+        color: '#a02727',
+      },
+      {
+        title: 'modulo1',
+        description: 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor',
+        image: img2,
+        color: '#a02727',
+      },
+      {
+        title: 'modulo1',
+        description: 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor',
+        image: img2,
+        color: '#a02727',
+      },
+    ],
   },
 ]
 

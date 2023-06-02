@@ -6,6 +6,7 @@ import singletonLogo from '../../assets/svgs/logo.svg'
 const NavegatorComponent = () => {
 
     useEffect(() => {
+
         const navbar = document.getElementById("nav-bar");
         let prevScrollPos = window.pageYOffset;
         if (navbar) {
@@ -24,22 +25,47 @@ const NavegatorComponent = () => {
 
     return (
         <NavegatorBox>
-                <nav id='nav-bar' className='nav-bar'>
-                    <div className='logo'>
-                        <img className='logo-img' src={singletonLogo} alt="" />
-                        <div className='title'>
-                            Singleton
-                        </div>
+            <nav id='nav-bar' className='nav-bar'>
+                <div className='logo'>
+                    <img className='logo-img' src={singletonLogo} alt="" />
+                    <div className='title'>
+                        Singleton
                     </div>
-                    <ul className='nav-ul'>
-                        <li><Link to="/">Home</Link></li>
-                        <li><Link to="/">Product</Link></li>
-                        <li><Link to="/">Services</Link></li>
-                        <li><Link to="/about">About</Link></li>
-                        <li><Link to="/blog">Blog</Link></li>
-                        <li><Link to="/">Contact</Link></li>
-                    </ul>
-                </nav>
+                </div>
+                <ul className='nav-ul'>
+                    <li><Link to="#home">Home</Link></li>
+                    <li><Link to="#home">Product</Link></li>
+                    <li><Link to="#home">Services</Link></li>
+                    <li><Link to="#home">About</Link></li>
+                    <li><Link to="#home">Blog</Link></li>
+                    <li><Link to="#home">Contact</Link></li>
+                    <li><Link to="/" className='country-label'>
+                        <div className='country bolivia'>
+                            <span className='B'>
+                                B
+                            </span >
+                            <span className='O'>
+                                O
+                            </span >
+                            <span className='L'>
+                                L
+                            </span>
+                        </div>
+                        <div className='country paraguay'>
+                            <span className='P'>
+                                P
+                            </span >
+                            <span className='A'>
+                                A
+                            </span >
+                            <span className='R'>
+                                R
+                            </span>
+                        </div>
+                    </Link></li>
+
+                </ul>
+            </nav>
         </NavegatorBox>
     )
 }

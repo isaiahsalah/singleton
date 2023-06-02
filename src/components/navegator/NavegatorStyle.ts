@@ -2,6 +2,8 @@ import { Color, FontSize } from "../../utils/Config";
 import styled from "styled-components";
 
 export const NavegatorBox = styled.nav`
+  //font-family: "Abril Fatface";
+
   z-index: 2;
   position: fixed;
   display: flex;
@@ -35,13 +37,16 @@ export const NavegatorBox = styled.nav`
     align-items: center;
   }
   ul {
-    font-size: ${FontSize.littleSubTitle3};
+    font-size: 0.9em;
 
     list-style: none;
     display: flex;
     margin: 0;
     padding: 0;
-    gap: 12px;
+    gap: 16px;
+
+    //font-family: "Roboto Mono";
+    //font-family: "Bebas Neue";
     //font-family: 'Courier New', Courier, monospace;
   }
   li {
@@ -73,7 +78,7 @@ export const NavegatorBox = styled.nav`
   .title {
     transition: color 0.15s ease-in-out;
     margin: 0;
-    color: ${Color.primaryLight};
+    color: ${Color.light};
     cursor: pointer;
     font-size: ${FontSize.littleSubTitle1};
   }
@@ -81,6 +86,7 @@ export const NavegatorBox = styled.nav`
     color: ${Color.active};
   }
   .logo-img {
+    display: none;
     filter: saturate(0);
   }
   .icon-li {
@@ -90,5 +96,45 @@ export const NavegatorBox = styled.nav`
     align-items: center;
     justify-content: center;
     margin: 0;
+  }
+
+  .country-label {
+    font-weight: bold;
+    transition: .25s;
+    &:hover {
+      .bolivia {
+        display: none;
+      }
+
+      .paraguay {
+        display: block;
+      }
+    }
+  }
+
+  .country{
+  }
+  .paraguay {
+    display: none;
+  }
+
+  .B {
+    color: red;
+  }
+  .O {
+    color: yellow;
+  }
+  .L {
+    color: green;
+  }
+
+  .P {
+    color: red;
+  }
+  .A {
+    color: white;
+  }
+  .R {
+    color: blue;
   }
 `;

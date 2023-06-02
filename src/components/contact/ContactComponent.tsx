@@ -8,19 +8,13 @@ interface Props {
 const ContactComponent = (props: Props) => {
     return (
         <ContactBox>
-            <div className='social-media'>
-                <div className='social-media-box'>
 
-                    <ul>
-                        {props.SocialMedia.map((social, i) =>
-                            <li key={i} title={social.title}>
-                                <a href={social.link} target='_blanck'>
-                                    <social.icon className='icon' />
-                                </a>
-                            </li>)}
-                    </ul>
-                    <div className='line'></div>
-                </div>
+            <div className='contact'>
+                <div className='line'></div>
+                <a className='contact-text' href="./" target='_blanck'>
+                    Contacta con ventas
+                </a>
+                <div className='line'></div>
             </div>
         </ContactBox>
     )

@@ -12,6 +12,7 @@ import BlogSection from './blog/BlogSection'
 import ContactSection from './contact/ContactSection'
 import ContactComponent from '../../components/contact/ContactComponent'
 import FooterComponent from '../../components/footer/FooterComponent'
+import SocialMediaComponent from '../../components/socialMedia/SocialMediaComponent'
 
 
 
@@ -20,6 +21,7 @@ const HomePage = () => {
     <HomeBox>
       <BackgroundImageComponent/>
       <ContactComponent SocialMedia={SocialMedia}/>
+      <SocialMediaComponent SocialMedia={SocialMedia}/>
       <NavegatorComponent />
       <PresentationSection />
       <ProductsSection />

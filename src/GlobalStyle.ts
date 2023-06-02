@@ -1,5 +1,5 @@
 import { Color, FontSize } from "./utils/Config";
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
 
@@ -30,8 +30,10 @@ body::-webkit-scrollbar{
     }
 
 a {
-  color: #8491A0;
   text-decoration: inherit;
+  color: ${Color.light};
+  //color: #8491A0;
+ 
 }
 a:hover {
   color: ${Color.active};
@@ -52,13 +54,13 @@ h1 {
 
 button {
   border-radius: 5px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
+  border: 1px solid  ${Color.light};
+  padding: 0.4em 1.2em;
+  font-size: .9em;
   font-weight: 500;
   font-family: inherit;
-  background-color: ${Color.light};
-  color: ${Color.background};
+  background-color: ${Color.background};
+  color: ${Color.light};
 
   cursor: pointer;
   transition: 0.25s;
@@ -66,12 +68,20 @@ button {
 button:hover {
   background-color: ${Color.active};
   color: ${Color.background};
-
   border-color: ${Color.active};
 }
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+
+.section-title{
+  font-family: "Abril Fatface";
+  width: 100%;
+      text-align: center;
+    font-size: 3em;
+    padding: 20px;
 }
 /*
 @media (prefers-color-scheme: light) {
@@ -88,4 +98,4 @@ button:focus-visible {
 }*/
 
 
-`
+`;

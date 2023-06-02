@@ -6,7 +6,7 @@ import { ServicesList } from '../../../utils/Config'
 const ServicesSection = () => {
   return (
     <ServicesBox>
-        <div className='products-section-title'>
+        <div className='section-title'>
         Nuestros Productos
       </div>
       < SlideDinamicComponent items={ServicesList}/>
