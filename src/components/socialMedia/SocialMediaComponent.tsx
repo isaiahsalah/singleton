@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { SocialMediaBox } from './SocialMediatStyle'
 
 interface Props {
@@ -6,10 +6,14 @@ interface Props {
 }
 
 const SocialMediaComponent = (props: Props) => {
+
+
+
     return (
         <SocialMediaBox>
-            <div className='social-media'>
-                <div className='line'></div>
+            <div id='social-media-container'>
+            <div  className='social-media'>
+                <div className='line-long'></div>
                 <ul>
                     {props.SocialMedia.map((social, i) =>
                         <li key={i} title={social.title}>
@@ -19,7 +23,8 @@ const SocialMediaComponent = (props: Props) => {
 
                         </li>)}
                 </ul>
-                <div className='line'></div>
+                <div className='line-short'></div>
+            </div>
             </div>
         </SocialMediaBox>
     )

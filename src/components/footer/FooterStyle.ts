@@ -8,4 +8,5 @@ export const FooterBox = styled.nav`
     justify-content : center;
     text-align: center;
     font-size: .8em;
+    padding: 10px 0;
 `

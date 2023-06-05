@@ -11,7 +11,7 @@ right: 0;
 opacity: .5;
 .background-image{
     object-fit: cover;
-    opacity: .8;
+    opacity: .4;
 mix-blend-mode: multiply;
     width:100%;
     height:100%;

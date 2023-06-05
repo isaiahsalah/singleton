@@ -67,26 +67,46 @@ const BannerComponent = (props: Props) => {
 
 
             <div className='slide-container'>
-                <div className={`item-backimage-container ${loaded ? "loaded" : ""}`}>
+                <div className={`item-backimage-container`}>
                     <img
                         src={selectedItem.backimage}
-                        className='item-backimage'
-                        onLoad={() => setLoaded(true)} />
+                        className={`item-backimage ${loaded ? "loaded" : ""}`}
+                        onLoad={() => setLoaded(true)}
+                    />
                 </div>
-                <div className={`item-title-variant ${loaded ? "loaded" : ""}`}>
-                    {selectedItem.title}
+                <div className='item-images'>
+                    <div className={`item-secondimage-container ${loaded ? "loaded" : ""}`}>
+                        <img
+                            src={selectedItem.backimage}
+                            className='item-secondimage'
+                            onLoad={() => setLoaded(true)}
+                        />
+                    </div>
+                    
+                    <div className={`item-logo-container ${loaded ? "loaded" : ""}`}>
+                        <img
+                            src={selectedItem.logo}
+                            className='item-logo'
+                            onLoad={() => setLoaded(true)} />
+                    </div>
                 </div>
-                <div className={`item-logo-container ${loaded ? "loaded" : ""}`}>
-                    <img
-                        src={selectedItem.logo}
-                        className='item-logo'
-                        onLoad={() => setLoaded(true)} />
-                </div>
+                <div className={`item-title-variant-container ${loaded ? "loaded" : ""}`}>
+                <h1 className={`item-title-variant ${loaded ? "loaded" : ""}`}>
+                        {selectedItem.title}
+                    </h1>
+                    </div>
+
 
                 <div className={`item-info ${loaded ? "loaded" : ""}`}>
-                    <div className={`item-item ${loaded ? "loaded" : ""}`}>{selectedItem.item}</div>
-                    <div className={`item-title ${loaded ? "loaded" : ""}`}>{selectedItem.title}</div>
-                    <div className={`item-description ${loaded ? "loaded" : ""}`}>{selectedItem.description}</div>
+                    <p className={`item-item ${loaded ? "loaded" : ""}`}>
+                        {selectedItem.item}
+                        </p>
+                    <h2 className={`item-title ${loaded ? "loaded" : ""}`}>
+                        {selectedItem.title}
+                        </h2>
+                    <p className={`item-description ${loaded ? "loaded" : ""}`}>
+                        {selectedItem.description}
+                        </p>
                     <div className='item-button-container'>
                         <button className={`item-button ${loaded ? "loaded" : ""}`}>Ver Más</button>
                     </div>

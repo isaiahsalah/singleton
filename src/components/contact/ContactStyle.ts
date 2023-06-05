@@ -2,41 +2,57 @@ import { Color, FontSize } from "../../utils/Config";
 import styled from "styled-components";
 
 export const ContactBox = styled.nav`
-  position: fixed;
-  top: 0px;
-  right: 0px;
-  z-index: 3;
-  width: 60px;
-  z-index: 5;
+  #contact-container {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    z-index: 3;
+    width: 5%;
+    z-index: 20;
+    transition: right 0.25s ease-out 0.2s, opacity 0.25s ease-out 0.2s;
+
+  }
   a {
     writing-mode: vertical-rl;
     text-align: right;
+    white-space: nowrap;
   }
 
   .contact {
     width: 100%;
+    height: 100vh;
     display: flex;
-
-    //flex-wrap: wrap;
-    justify-content: center;
-    align-items: top;
-    gap: 8px;
-  }
-
-  .line {
-    background-color: ${Color.light};
-    border-radius: 5px;
-    width: 2px;
-    height: 250px;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    gap: 12px;
   }
 
   .contact-text {
-    margin: 0 0 10px 0;
+    margin: 0;
     font-size: 0.85em;
     transition: 0.25s;
   }
 
   .contact-text:hover {
-    transform: scale(1.1)
+    transform: scale(1.05);
+  }
+
+  @media screen and (max-width: 600px) {
+    .contact {
+    display: none;
+  }
+  }
+
+  @media screen and (min-width: 601px) and (max-width: 1200px) {
+    .contact {
+    display: none;
+  }
+  }
+
+  @media screen and (min-width: 1201px) {
+    .contact {
+    display: flex;
+  }
   }
 `;

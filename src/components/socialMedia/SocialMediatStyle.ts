@@ -2,50 +2,53 @@ import { Color, FontSize } from "../../utils/Config";
 import styled from "styled-components";
 
 export const SocialMediaBox = styled.nav`
-   position: fixed;
+
+
+#social-media-container{
+  position: fixed;
     bottom: 0px;
     left: 0px;
-    z-index: 3;
-    width: 60px;
+    z-index: 20;
+    width: 5%;
+    transition: left 0.25s ease-out 0.2s, opacity 0.25s ease-out 0.2s; 
+
+}
 
   .social-media {
     width: 100%;
+    height: 100vh;
     display: flex;
+    flex-direction: column;
     //flex-wrap: wrap;
-    justify-content: right;
-    align-items: top;
+    justify-items: center;
+    align-items: center;
     gap: 12px;
 
   }
   .icon {
     height: 1.2em;
     width: 100%;
-    color: ${Color.light};
+    color: ${Color.alternative};
     transition: color 0.15s ease-in-out, transform 0.15s ease-in-out;
   
   }
 
   .icon:hover {
-    color: ${Color.active};
     transform: scale(1.25);
   }
 
-  .line {
-    background-color: ${Color.light};
-    border-radius: 5px;
-    width: 2px;
-    height: 250px;
-  }
+
+
+
   
   ul {
     //width: 100%;
     list-style:none;
-    margin: 10px 0 0 0;
+    margin: 10px 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: baseline;
-    align-items: top;
+    display: grid;
+    justify-content: center;
+    align-content: center;
     gap: 18px;
     
   }
@@ -59,5 +62,20 @@ export const SocialMediaBox = styled.nav`
     display: flex;
   }
 
+  @media screen and (max-width: 600px) {
+    .social-media {
+    display: none;
+  }
+  }
 
+  @media screen and (min-width: 601px) and (max-width: 1200px) {
+    .social-media {
+    display: none;
+  }
+  }
+
+  @media screen and (min-width: 1201px) {
+    .social-media {
+    display: flex;
+  }}
 `;

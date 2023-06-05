@@ -2,70 +2,97 @@ import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { NavegatorBox } from './NavegatorStyle'
 import singletonLogo from '../../assets/svgs/logo.svg'
+import { GiHamburgerMenu } from "react-icons/gi"
 
 const NavegatorComponent = () => {
 
     useEffect(() => {
+        const div = document.querySelector('.nav-menu') as HTMLElement;
 
-        const navbar = document.getElementById("nav-bar");
-        let prevScrollPos = window.pageYOffset;
-        if (navbar) {
-            window.onscroll = () => {
-                if (navbar.style.top === "") {
-                    navbar.style.top = "0px";
-                }
-                const currentScrollPos = window.pageYOffset;
-                if (prevScrollPos > currentScrollPos) navbar.style.top = "0px";
-                else navbar.style.top = "-80px";
-                prevScrollPos = currentScrollPos;
-            };
+        function ajustarDiv() {
+            const ventanaAncho = window.innerWidth;
+
+            if (ventanaAncho < 1200) {
+                div.style.display = "none";
+            } else {
+                div.style.display = 'flex'; // O el valor original deseado
+            }
         }
 
-    }, []);
+        // Llama a la función cuando la ventana cambia de tamaño
+        window.addEventListener('resize', ajustarDiv);
+
+        // Llama a la función al cargar la página
+        window.addEventListener('load', ajustarDiv);
+    }, [])
+
+
+    const openMenuMovil = () => {
+        const menu = document.querySelector(".nav-menu") as HTMLElement;
+        if (menu && menu.style.display === "none" || menu.style.display === "") {
+            menu.style.display = "grid";
+        }
+    };
+    const closeMenuMovil = () => {
+        const menu = document.querySelector(".nav-menu") as HTMLElement;
+        const ancho = window.innerWidth;
+        if (ancho <= 1200 && menu.style.display === "grid") {
+            menu.style.display = "none";
+        }
+    };
 
     return (
         <NavegatorBox>
-            <nav id='nav-bar' className='nav-bar'>
-                <div className='logo'>
-                    <img className='logo-img' src={singletonLogo} alt="" />
-                    <div className='title'>
-                        Singleton
+            <header id='header-nav'>
+                <nav id='nav-container' className='nav-container'>
+                    <div className='logo-container'>
+                        <img className='logo-img' src={singletonLogo} alt="" />
+                        <div className='logo-title'>
+                            Singleton
+                        </div>
                     </div>
-                </div>
-                <ul className='nav-ul'>
-                    <li><Link to="#home">Home</Link></li>
-                    <li><Link to="#home">Product</Link></li>
-                    <li><Link to="#home">Services</Link></li>
-                    <li><Link to="#home">About</Link></li>
-                    <li><Link to="#home">Blog</Link></li>
-                    <li><Link to="#home">Contact</Link></li>
-                    <li><Link to="/" className='country-label'>
-                        <div className='country bolivia'>
-                            <span className='B'>
-                                B
-                            </span >
-                            <span className='O'>
-                                O
-                            </span >
-                            <span className='L'>
-                                L
-                            </span>
-                        </div>
-                        <div className='country paraguay'>
-                            <span className='P'>
-                                P
-                            </span >
-                            <span className='A'>
-                                A
-                            </span >
-                            <span className='R'>
-                                R
-                            </span>
-                        </div>
-                    </Link></li>
+                    <div className="hamburger" onClick={openMenuMovil}>
+                        <GiHamburgerMenu className="icon-movil" />
+                    </div>
+                    <ul className='nav-menu' onClick={closeMenuMovil}>
+                        <li className='nav-item'><Link className='nav-link' to="#home">Home</Link></li>
+                        <li className='nav-item'><Link className='nav-link' to="#home">Product</Link></li>
+                        <li className='nav-item'><Link className='nav-link' to="#home">Services</Link></li>
+                        <li className='nav-item'><Link className='nav-link' to="#home">About</Link></li>
+                        <li className='nav-item'><Link className='nav-link' to="#home">Blog</Link></li>
+                        <li className='nav-item'><Link className='nav-link' to="#home">Contact</Link></li>
+                        <li>
+                            <Link to="/" className='country-container'>
+                                <div className='country bolivia'>
+                                    <span className='B'>
+                                        B
+                                    </span >
+                                    <span className='O'>
+                                        O
+                                    </span >
+                                    <span className='L'>
+                                        L
+                                    </span>
+                                </div>
+                                <div className='country paraguay'>
+                                    <span className='P'>
+                                        P
+                                    </span >
+                                    <span className='A'>
+                                        A
+                                    </span >
+                                    <span className='R'>
+                                        R
+                                    </span>
+                                </div>
+                            </Link>
+                        </li>
 
-                </ul>
-            </nav>
+                    </ul>
+
+                </nav>
+            </header>
+
         </NavegatorBox>
     )
 }

@@ -5,6 +5,7 @@ import {
   RiCodepenFill, 
   RiFacebookBoxFill, 
   RiGithubFill, 
+  RiInstagramFill, 
   RiLinkedinFill, 
   RiTwitterFill, 
   RiWhatsappFill, 
@@ -13,16 +14,13 @@ import {
 
 export const Color = {
   primary: '#475A71',
-  active: '#FF852E',
-  alternative: '#C55428',
-  //secondary: '#015270',
-  background: '#1F1F1F',
-  primaryLight: ' #8491A0',
-  light: '#F2E2D2',
-  white: '#FFFFFF',
+  secondary: '#1F1F1F',
+  active: '#5D9BE8',
+  alternative: '#ffffff',
+  warning: '#E8A074',
 
 }
-
+/*
 export const FontSize = {
   extraBigTitle1: '110px',
   extraBigTitle2: '100px',
@@ -51,7 +49,7 @@ export const FontSize = {
 
 
 }
-
+*/
 export const ContactMessage = {
   title: '¿Quieres saber más sobre nuestro proyecto?',
   message: 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500,'
@@ -128,37 +126,37 @@ export const ProductsList = [
       {
         title: 'modulo1',
         description: 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor',
-        image: img2,
+        icon: RiWhatsappFill,
         color: '#a02727',
       },
       {
         title: 'modulo1',
         description: 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor',
-        image: img2,
+        icon: RiWhatsappFill,
         color: '#a02727',
       },
       {
         title: 'modulo1',
         description: 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor',
-        image: img2,
+        icon: RiWhatsappFill,
         color: '#a02727',
       },
       {
         title: 'modulo1',
         description: 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor',
-        image: img2,
+        icon: RiWhatsappFill,
         color: '#a02727',
       },
       {
         title: 'modulo1',
         description: 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor',
-        image: img2,
+        icon: RiWhatsappFill,
         color: '#a02727',
       },
       {
         title: 'modulo1',
         description: 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor',
-        image: img2,
+        icon: RiWhatsappFill,
         color: '#a02727',
       },
     ],
@@ -172,19 +170,19 @@ export const ProductsList = [
       {
         title: 'modulo1',
         description: 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor',
-        image: img2,
+        icon: RiWhatsappFill,
         color: '#a02727',
       },
       {
         title: 'modulo1',
         description: 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor',
-        image: img2,
+        icon: RiWhatsappFill,
         color: '#a02727',
       },
       {
         title: 'modulo1',
         description: 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor',
-        image: img2,
+        icon: RiWhatsappFill,
         color: '#a02727',
       },
     ],
@@ -198,19 +196,19 @@ export const ProductsList = [
       {
         title: 'modulo1',
         description: 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor',
-        image: img2,
+        icon: RiWhatsappFill,
         color: '#a02727',
       },
       {
         title: 'modulo1',
         description: 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor',
-        image: img2,
+        icon: RiWhatsappFill,
         color: '#a02727',
       },
       {
         title: 'modulo1',
         description: 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor',
-        image: img2,
+        icon: RiWhatsappFill,
         color: '#a02727',
       },
     ],
@@ -250,4 +248,79 @@ export const ServicesList = [
     description: 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) ',
     image: img3,
   },
+]
+
+export const TeamList=[
+  {
+    Name:"nombre random",
+    Image:"https://i.pinimg.com/564x/25/86/f2/2586f23530da330c9aa20a0ae993a067.jpg",
+    Position:"Developer",
+    Description:"Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) ",
+    SocialMedia:[
+      {
+        Name:"facebook",
+        Url:"https://www.facebook.com",
+        Icon: RiFacebookBoxFill
+      },
+      {
+        Name:"instagram",
+        Url:"https://www.instagram.com",
+        Icon: RiInstagramFill
+      }
+    ]
+  },
+  {
+    Name:"nombre random",
+    Image:"https://i.pinimg.com/564x/25/86/f2/2586f23530da330c9aa20a0ae993a067.jpg",
+    Position:"Developer",
+    Description:"Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) ",
+    SocialMedia:[
+      {
+        Name:"facebook",
+        Url:"https://www.facebook.com",
+        Icon: RiFacebookBoxFill
+      },
+      {
+        Name:"instagram",
+        Url:"https://www.instagram.com",
+        Icon: RiInstagramFill
+      }
+    ]
+  },
+  {
+    Name:"nombre random",
+    Image:"https://i.pinimg.com/564x/25/86/f2/2586f23530da330c9aa20a0ae993a067.jpg",
+    Position:"Developer",
+    Description:"Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) ",
+    SocialMedia:[
+      {
+        Name:"facebook",
+        Url:"https://www.facebook.com",
+        Icon: RiFacebookBoxFill
+      },
+      {
+        Name:"instagram",
+        Url:"https://www.instagram.com",
+        Icon: RiInstagramFill
+      }
+    ]
+  },
+  {
+    Name:"nombre random",
+    Image:"https://i.pinimg.com/564x/25/86/f2/2586f23530da330c9aa20a0ae993a067.jpg",
+    Position:"Developer",
+    Description:"Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) ",
+    SocialMedia:[
+      {
+        Name:"facebook",
+        Url:"https://www.facebook.com",
+        Icon: RiFacebookBoxFill
+      },
+      {
+        Name:"instagram",
+        Url:"https://www.instagram.com",
+        Icon: RiInstagramFill
+      }
+    ]
+  }
 ]

@@ -1,14 +1,24 @@
-import React from 'react'
+import React, {useEffect}from 'react'
 import { ProductBox } from './ProductsStyle';
 import SlideComponent from '../../../components/slide/SlideComponent';
 import { ProductsList } from '../../../utils/Config';
 
 const ProductsSection = () => {
+
+  
   return (
     <ProductBox>
-      <div className='section-title'>
-        Nuestros Productos
+      <h1 className='title-section-back'>Productos</h1>
+
+      <div className='title-section-container'>
+        <div className='line-horizontal-short' />
+        <h5 className='section-title abril'>
+          Nuestros Productos
+        </h5>
+        <div className='line-horizontal-long' />
       </div>
+
+
       <div className='product-list'>
         {ProductsList.map((item, index) => (
           <div className='product-item' key={index}>
@@ -17,21 +27,21 @@ const ProductsSection = () => {
             </div>
             <div className='product-info'>
               <div className='product-class'>{item.item}</div>
-              <div className='product-title'>{item.title}</div>
-              <div className='product-description'>{item.description}</div>
-              
+              <h2 className='product-title'>{item.title}</h2>
+              <p className='product-description'>{item.description}</p>
+              <div className='product-module-list'>
+                {item.modules.map((module, index) => {
+                  return <div
+                    className='product-module'
+                    key={index}><module.icon /></div>
+                })}
+              </div>
               <div className='product-button-container' >
                 <button className='product-button'>Ver más</button>
               </div>
+
             </div>
-            <div className='product-module-list'>
-                {item.modules.map((module, index) => {
-                  return <div
-                    style={{ backgroundColor: module.color }}
-                    className='product-module'
-                    key={index}>{module.title}</div>
-                })}
-              </div>
+
           </div>
         ))}
       </div>

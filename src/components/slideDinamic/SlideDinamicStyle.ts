@@ -1,4 +1,4 @@
-import { Color, FontSize } from "../../utils/Config";
+import { Color } from "../../utils/Config";
 import styled from "styled-components";
 
 export const SlideDinamicBox = styled.div`
@@ -13,7 +13,7 @@ export const SlideDinamicBox = styled.div`
     position: relative;
     grid-column: 1fr;
     z-index: 3;
-    opacity: 0.2;
+    opacity: 1;
     transition: all 0.2s;
     &:hover {
     //position: absolute;
@@ -28,6 +28,7 @@ export const SlideDinamicBox = styled.div`
     }
   }
   .product-info {
+    opacity: 0;
     position: absolute;
     bottom: 50px;
     padding: 0px 50px;
@@ -37,7 +38,6 @@ export const SlideDinamicBox = styled.div`
     width: 100%;
   }
   .product-title {
-    font-size: ${FontSize.bigSubTitle1};
     //filter: grayscale(100);
     //filter: saturate(0);
     //mix-blend-mode: lighten;
@@ -48,7 +48,6 @@ export const SlideDinamicBox = styled.div`
   }
 
   .product-description {
-    font-size: ${FontSize.description1};
   }
   .product-button-container {
     display: flex;
@@ -59,7 +58,8 @@ export const SlideDinamicBox = styled.div`
     height: 85vh;
     width: 100%;
     object-fit: cover;
-    filter: saturate(0);
-    opacity: 0.5;
+    filter: saturate(0) brightness(0.5);
+    opacity: 1;
+    border-radius: 0;
   }
 `;

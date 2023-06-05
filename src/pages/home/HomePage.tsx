@@ -13,6 +13,7 @@ import ContactSection from './contact/ContactSection'
 import ContactComponent from '../../components/contact/ContactComponent'
 import FooterComponent from '../../components/footer/FooterComponent'
 import SocialMediaComponent from '../../components/socialMedia/SocialMediaComponent'
+import TeamSection from './team/TeamSection'
 
 
 
@@ -27,6 +28,8 @@ const HomePage = () => {
       <ProductsSection />
       <ServicesSection/>
       <AboutSection/>
+      <TeamSection/>
+
       <BlogSection/>
       <ContactSection/>
 <FooterComponent/>
