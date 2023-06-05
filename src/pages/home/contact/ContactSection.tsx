@@ -5,11 +5,24 @@ import { ContactMessage } from '../../../utils/Config'
 const ContactSection = () => {
     return (
         <ContactBox>
-            <div className='contact-back'>Contactanos</div>
-            <div className='contact-title'>{ContactMessage.title}</div>
-            <div className='contact-message'>
-                {ContactMessage.message}            </div>
-            <button className='contact-button'>Dí Hola</button>
+            <h1 className='title-section-back'>Contact</h1>
+            <div className='title-section-container'>
+                <div className='line-horizontal-long' />
+                <h5 className='section-title abril'>
+                    Contactanos
+                </h5>
+                <div className='line-horizontal-long' />
+            </div>
+            <div className='contact-section-container'>
+                <div className='contact-title'>{ContactMessage.title}</div>
+                <div className='contact-message'>
+                    {ContactMessage.message}
+                </div>
+                <button className='contact-button'>
+                    Dí Hola
+                </button>
+            </div>
+
         </ContactBox>
     )
 }

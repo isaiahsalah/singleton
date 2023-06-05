@@ -1,4 +1,4 @@
-import { Color, FontSize } from "../../../utils/Config";
+import { Color } from "../../../utils/Config";
 import styled from 'styled-components'
 
 export const ContactBox = styled.div`
@@ -10,6 +10,15 @@ justify-content: center;
 align-items: center;
 text-align: center;
 position: relative;
+.contact-section-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
 .contact-title {
     width: 40%;
     font-size:3em;

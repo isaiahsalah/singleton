@@ -24,6 +24,9 @@ export const GlobalStyle = createGlobalStyle`
 body::-webkit-scrollbar{
         width: 0px;
     }
+    html{
+        scroll-behavior: smooth;
+    }
     body::-webkit-scrollbar-thumb{
         border-radius: 0px;
         
@@ -138,7 +141,7 @@ h1, h2, h3, h4, h5, p{
       display:flex;
       width: 100%;
       align-items: center;
-      gap: 12px;
+      gap: 20px;
       
    }
    .section-title{

@@ -3,7 +3,11 @@ import { FooterBox } from './FooterStyle'
 
 const FooterComponent = () => {
   return (
-    <FooterBox>© Singleton. Todos los derechos reservados.</FooterBox>
+    <FooterBox>
+      <div className='line-horizontal-long' />
+      © Singleton. Todos los derechos reservados.
+      <div className='line-horizontal-long' />
+    </FooterBox>
   )
 }
 

@@ -2,6 +2,7 @@ import { Color } from "../../../utils/Config";
 import styled from "styled-components";
 
 export const BlogSectionBox = styled.div`
+position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

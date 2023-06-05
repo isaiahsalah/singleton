@@ -7,7 +7,7 @@ const ProductsSection = () => {
 
   
   return (
-    <ProductBox>
+    <ProductBox id='product'>
       <h1 className='title-section-back'>Productos</h1>
 
       <div className='title-section-container'>

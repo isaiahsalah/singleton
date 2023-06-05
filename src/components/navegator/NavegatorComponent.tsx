@@ -56,11 +56,11 @@ const NavegatorComponent = () => {
                     </div>
                     <ul className='nav-menu' onClick={closeMenuMovil}>
                         <li className='nav-item'><Link className='nav-link' to="#home">Home</Link></li>
-                        <li className='nav-item'><Link className='nav-link' to="#home">Product</Link></li>
-                        <li className='nav-item'><Link className='nav-link' to="#home">Services</Link></li>
-                        <li className='nav-item'><Link className='nav-link' to="#home">About</Link></li>
-                        <li className='nav-item'><Link className='nav-link' to="#home">Blog</Link></li>
-                        <li className='nav-item'><Link className='nav-link' to="#home">Contact</Link></li>
+                        <li className='nav-item'><a className='nav-link' href="#product">Product</a></li>
+                        <li className='nav-item'><Link className='nav-link' to="#services">Services</Link></li>
+                        <li className='nav-item'><Link className='nav-link' to="#about">About</Link></li>
+                        <li className='nav-item'><Link className='nav-link' to="#blog">Blog</Link></li>
+                        <li className='nav-item'><Link className='nav-link' to="#contact">Contact</Link></li>
                         <li>
                             <Link to="/" className='country-container'>
                                 <div className='country bolivia'>
