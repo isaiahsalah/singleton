@@ -1,51 +1,97 @@
-import React, {useEffect}from 'react'
+import React, { useEffect, useState } from 'react'
 import { ProductBox } from './ProductsStyle';
-import SlideComponent from '../../../components/slide/SlideComponent';
 import { ProductsList } from '../../../utils/Config';
+import videoWork from '../../../assets/video/work-video.mp4'
+import Slider from "react-slick";
 
 const ProductsSection = () => {
+  const [selectedItem, setSelectedItem] = useState(ProductsList[0])
+  const [selectedIndex, setSelectedIndex] = useState(0)
+  const [loaded, setLoaded] = useState(false);
+/*
+  useEffect(() => {
+    const interval = setInterval(() => {
+      selectedNewItem(selectedIndex, ProductsList)
+    }, 8000)
+    return () => {
+      clearInterval(interval)
+    }
+  })*/
 
-  
+  const selectedNewItem = (index: number, items: any, next = true) => {
+    setLoaded(false)
+    setTimeout(() => {
+      const condition = next ? selectedIndex < items.length - 1 : selectedIndex > 0;
+      const nextIndex = next ? (condition ? selectedIndex + 1 : 0) : (condition ? selectedIndex - 1 : items.length - 1)
+      setSelectedItem(items[nextIndex])
+      setSelectedIndex(nextIndex)
+    }, 1000)
+  }
+
+  const next = () => {
+    selectedNewItem(selectedIndex, ProductsList)
+  }
+  const previus = () => {
+    selectedNewItem(selectedIndex, ProductsList, false)
+  }
   return (
     <ProductBox id='product'>
-      <h1 className='title-section-back'>Productos</h1>
-
+      <video loop autoPlay className='product-back-video' data-type="parallax" data-depth="0.10" src={videoWork}>
+      </video>
       <div className='title-section-container'>
-        <div className='line-horizontal-short' />
-        <h5 className='section-title abril'>
+        <h6 className='section-title'>
           Nuestros Productos
-        </h5>
-        <div className='line-horizontal-long' />
+        </h6>
       </div>
 
 
       <div className='product-list'>
-        {ProductsList.map((item, index) => (
-          <div className='product-item' key={index}>
-            <div className='product-image-container'>
-              <img className='product-image' src={item.image} alt={item.title} />
+        <div className='product-item' >
+          <div className='product-info'>
+            <p className={`product-class ${loaded ? "loaded" : ""}`} >{selectedItem.item}</p>
+            <h1 className={`product-title ${loaded ? "loaded" : ""}`}>{selectedItem.title}</h1>
+            <p className={`product-description ${loaded ? "loaded" : ""}`}>{selectedItem.description}</p>
+            <div className={`product-module-list ${loaded ? "loaded" : ""}`}>
+              {selectedItem.modules.map((module, index) =>
+                <div
+                  className='product-module'
+                  key={index}>
+                  <module.icon className='product-module-icon' />
+                  <p className='product-module-title'>{module.title}</p>
+                </div>
+              )}
             </div>
-            <div className='product-info'>
-              <div className='product-class'>{item.item}</div>
-              <h2 className='product-title'>{item.title}</h2>
-              <p className='product-description'>{item.description}</p>
-              <div className='product-module-list'>
-                {item.modules.map((module, index) => {
-                  return <div
-                    className='product-module'
-                    key={index}><module.icon /></div>
-                })}
-              </div>
-              <div className='product-button-container' >
-                <button className='product-button'>Ver más</button>
-              </div>
-
+            <div className={`product-button-container ${loaded ? "loaded" : ""}`}>
+              <button className='product-button'>Ver Info</button>
             </div>
 
           </div>
-        ))}
+          <div className={`product-image-container ${loaded ? "loaded" : ""}`}>
+            <img
+              className='product-image'
+              src={selectedItem.image}
+              alt={selectedItem.title}
+              onLoad={() => setLoaded(true)} />
+          </div>
+
+
+        </div>
+        <div id="pagination">
+          {
+            ProductsList.map((item, index) =>
+              <button
+                key={index}
+                onClick={() => selectedNewItem(index, ProductsList)}
+                className={`product-button ${index === selectedIndex ? "active" : ""}`}
+                data-slide={index}
+              >
+              </button>
+            )
+          }
+        </div>
       </div>
 
+      <div></div>
 
 
 

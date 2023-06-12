@@ -1,24 +1,37 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
-import img3 from '../../../assets/images/imagen3.jpg'
 import { PresentationBox } from './PresentationStyle';
-import BannerComponent from '../../../components/banner/BannerComponent';
 import { PresentationItems } from '../../../utils/Config';
-import SlideModernComponent from '../../../components/banner copy/SlideModernComponent';
-import { SlideTestBox } from '../../../components/prueba/SlideTestStyle';
-import SlideTestComponent from '../../../components/prueba/SlideTestComponent';
+import { Button } from '@mui/material';
 
+import faqImage from '../../../assets/images/teclado.jpg'
 
 const PresentationSection = () => {
-    
+
+
+
     return (
-        <PresentationBox>
-            {/*<SlideModernComponent items={PresentationItems}/>
-            <SlideTestComponent items={PresentationItems}/>
-            */}
-            <BannerComponent items={PresentationItems}/>
-            
-    
+        <PresentationBox id='home' >
+
+            <img id='presentation-back-image' data-type="parallax" data-depth="0.20" src={faqImage} />
+
+            <div className='presentation-contend'>
+                <div className='presentation-text'>
+                    <h2 className='presentation-title'>
+                        Potencia tu negocio con nosotros
+                    </h2>
+                    <p className='presentation-description'>
+                        Transforma tu enfoque de negocio y potencia tus relaciones con los clientes con nuestro software CRM de vanguardia, impulsando el crecimiento y la excelencia en cada interacción
+                    </p>
+                    <div className='presentation-button-container'>
+                        <button>Cotizar</button>
+                        <button>Ver Productos</button>
+                    </div>
+                </div>
+
+
+            </div>
+
         </PresentationBox>
     )
 }

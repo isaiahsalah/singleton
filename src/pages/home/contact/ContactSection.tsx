@@ -1,27 +1,31 @@
 import React from 'react'
 import { ContactBox } from './ContactStyle'
 import { ContactMessage } from '../../../utils/Config'
+import videoContact from '../../../assets/video/mano-escribiendo-fonto-blanco.mp4'
+
 
 const ContactSection = () => {
     return (
-        <ContactBox>
-            <h1 className='title-section-back'>Contact</h1>
+        <ContactBox id='contact'>
+            <video loop autoPlay className='contact-back-video' data-type="parallax" data-depth="0.10" src={videoContact}>
+      </video>
             <div className='title-section-container'>
-                <div className='line-horizontal-long' />
-                <h5 className='section-title abril'>
+                <h6 className='section-title'>
                     Contactanos
-                </h5>
-                <div className='line-horizontal-long' />
+                </h6>
             </div>
             <div className='contact-section-container'>
-                <div className='contact-title'>{ContactMessage.title}</div>
+                <h5 className='contact-title'>{ContactMessage.title}</h5>
                 <div className='contact-message'>
                     {ContactMessage.message}
                 </div>
-                <button className='contact-button'>
-                    Dí Hola
-                </button>
+                <div className='contact-button-container'>
+                    <button className='contact-button'>
+                        Dí Hola
+                    </button>
+                </div>
             </div>
+            <div></div>
 
         </ContactBox>
     )

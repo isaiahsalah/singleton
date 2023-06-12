@@ -1,21 +1,49 @@
-import img1 from '../assets/images/img-01.jpg'
-import img2 from '../assets/images/img-02.jpg'
-import img3 from '../assets/images/img-03.jpg'
-import { 
-  RiCodepenFill, 
-  RiFacebookBoxFill, 
-  RiGithubFill, 
-  RiInstagramFill, 
-  RiLinkedinFill, 
-  RiTwitterFill, 
-  RiWhatsappFill, 
+import { GiTBrick } from 'react-icons/gi'
+import img1 from '../assets/images/teclado.jpg'
+import img2 from '../assets/images/pc.jpg'
+import img3 from '../assets/images/server.jpg'
+import techSvg from '../assets/svgs/tech.svg'
+
+import {
+  RiCodepenFill,
+  RiFacebookBoxFill,
+  RiGithubFill,
+  RiInstagramFill,
+  RiLinkedinFill,
+  RiMapFill,
+  RiMapPinFill,
+  RiTwitterFill,
+  RiWhatsappFill,
   RiYoutubeFill
 } from "react-icons/ri"
-
+import {
+  SiTypescript,
+  SiJavascript,
+  SiAngular,
+  SiReact,
+  SiAmazon,
+  SiMicrosoft,
+  SiPostgresql,
+  SiFirebase,
+  SiMongodb,
+  SiMysql,
+  SiNetapp,
+  SiCsharp,
+  SiAdobexd,
+  SiXcode,
+  SiGit,
+  SiFlutter,
+  SiAndroid,
+  SiApple,
+  SiPython,
+  SiDart,
+  SiSwift,
+} from "react-icons/si";
+import { GrJava } from 'react-icons/gr'
 export const Color = {
   primary: '#475A71',
   secondary: '#1F1F1F',
-  active: '#5D9BE8',
+  active: '#2985d1',
   alternative: '#ffffff',
   warning: '#E8A074',
 
@@ -55,32 +83,37 @@ export const ContactMessage = {
   message: 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500,'
 }
 
-export const SocialMedia =[
+export const SocialMedia = [
   {
     title: "Whatsapp",
     link: "https://api.whatsapp.com/send?phone=59170881108&text=%20",
     icon: RiWhatsappFill
-},
-{
+  },
+  {
     title: "Linkedin",
     link: "https://www.linkedin.com/in/",
     icon: RiLinkedinFill
-},
-{
+  },
+  {
     title: "Twitter",
     link: "https://twitter.com/",
     icon: RiTwitterFill
-},
-{
+  },
+  {
     title: "Facebook",
     link: "https://codepen.io/",
     icon: RiFacebookBoxFill
-},
-{
-  title: "Youtube",
-  link: "https://codepen.io/",
-  icon: RiYoutubeFill
-}
+  },
+  {
+    title: "Youtube",
+    link: "https://codepen.io/",
+    icon: RiYoutubeFill
+  },
+  {
+    title: "Map",
+    link: "https://codepen.io/",
+    icon: RiMapPinFill
+  }
 ]
 
 
@@ -121,7 +154,7 @@ export const ProductsList = [
     title: 'Ramses',
     item: 'General',
     description: 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) ',
-    image: img1,
+    image: techSvg,
     modules: [
       {
         title: 'modulo1',
@@ -222,103 +255,310 @@ export const ServicesList = [
     title: 'Ramses',
     item: 'General',
     description: 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) ',
-    image: img1,
+    icon: GiTBrick,
   },
   {
     title: 'Sigma',
     item: 'Farmacias',
     description: 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) ',
-    image: img2,
+    icon: GiTBrick,
   },
   {
     title: 'Horus',
     item: 'Transporte',
     description: 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) ',
-    image: img3,
+    icon: GiTBrick,
   },
   {
     title: 'Horus',
     item: 'Transporte',
     description: 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) ',
-    image: img3,
+    icon: GiTBrick,
   },
   {
     title: 'Horus',
     item: 'Transporte',
     description: 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) ',
-    image: img3,
+    icon: GiTBrick,
   },
 ]
 
-export const TeamList=[
+
+
+export const AboutData = [
   {
-    Name:"nombre random",
-    Image:"https://i.pinimg.com/564x/25/86/f2/2586f23530da330c9aa20a0ae993a067.jpg",
-    Position:"Developer",
-    Description:"Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) ",
-    SocialMedia:[
+    title: "45",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+
+  },
+  {
+    title: "4",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+
+  }, {
+    title: "112",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+
+  }
+  ,
+  {
+    title: "10",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+
+  },
+  {
+    title: "25",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+
+  }
+]
+
+export const FaqList = [
+  {
+    title: "ola",
+    questions: [
       {
-        Name:"facebook",
-        Url:"https://www.facebook.com",
+        title: "Lorem  dolor  amet, consectetur adipiscin",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscinLorem ipsum dolor sit amet, consectetur adipiscin",
+      },
+      {
+        title: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+      },
+      {
+        title: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+      },
+      {
+        title: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+      },
+      {
+        title: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+      }
+    ]
+  },
+  {
+    title: "fara",
+    questions: [
+      {
+        title: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+      },
+      {
+        title: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+      },
+      {
+        title: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+      },
+      {
+        title: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+      },
+      {
+        title: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+      },
+      {
+        title: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+      }
+
+    ]
+  },
+  {
+    title: "nexus",
+    questions: [
+      {
+        title: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+      },
+      {
+        title: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+      },
+      {
+        title: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+      },
+      {
+        title: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+      },
+    ]
+  },
+  {
+    title: "ramses",
+    questions: [
+      {
+        title: "Lorem ipsum dolor sit amet, consectetur adipiscinasd",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+      },
+      {
+        title: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+      },
+      {
+        title: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+      },
+      {
+        title: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+      },
+      {
+        title: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscin",
+      }
+    ]
+  },
+
+
+]
+
+export const Technologies = [
+  {
+    name: "React",
+    icon: <SiReact />,
+  },
+  {
+    name: "Redux",
+    icon: <SiAmazon />,
+  },
+  {
+    name: "Redux",
+    icon: <SiTypescript />,
+  },
+  {
+    name: "Redux",
+    icon: <SiAngular />,
+  },
+  {
+    name: "Redux",
+    icon: <SiPython />,
+  },
+  {
+    name: "Redux",
+    icon: <SiPostgresql />,
+  },
+  {
+    name: "Redux",
+    icon: <SiFirebase />,
+  },
+  {
+    name: "Redux",
+    icon: <SiMongodb />,
+  },
+  {
+    name: "Redux",
+    icon: <SiMysql />,
+  },
+  {
+    name: "Redux",
+    icon: <SiNetapp />,
+  },
+  {
+    name: "Redux",
+    icon: <SiJavascript />,
+  },
+  {
+    name: "Redux",
+    icon: <SiCsharp />,
+  },
+  {
+    name: "Redux",
+    icon: <SiNetapp />,
+  },
+  {
+    name: "Redux",
+    icon: <SiSwift />,
+  },
+  {
+    name: "Redux",
+    icon: <SiDart />,
+  },
+  {
+    name: "Redux",
+    icon: <SiFlutter />,
+  },
+];
+
+export const TeamList = [
+  {
+    Id: 1,
+    Name: "nombre random",
+    Image: "https://i.pinimg.com/564x/25/86/f2/2586f23530da330c9aa20a0ae993a067.jpg",
+    Position: "Developer",
+    Description: "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) ",
+    SocialMedia: [
+      {
+        Name: "facebook",
+        Url: "https://www.facebook.com",
         Icon: RiFacebookBoxFill
       },
       {
-        Name:"instagram",
-        Url:"https://www.instagram.com",
+        Name: "instagram",
+        Url: "https://www.instagram.com",
         Icon: RiInstagramFill
       }
     ]
   },
   {
-    Name:"nombre random",
-    Image:"https://i.pinimg.com/564x/25/86/f2/2586f23530da330c9aa20a0ae993a067.jpg",
-    Position:"Developer",
-    Description:"Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) ",
-    SocialMedia:[
+    Id: 2,
+    Name: "nombre random",
+    Image: "https://i.pinimg.com/564x/25/86/f2/2586f23530da330c9aa20a0ae993a067.jpg",
+    Position: "Developer",
+    Description: "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) ",
+    SocialMedia: [
       {
-        Name:"facebook",
-        Url:"https://www.facebook.com",
+        Name: "facebook",
+        Url: "https://www.facebook.com",
         Icon: RiFacebookBoxFill
       },
       {
-        Name:"instagram",
-        Url:"https://www.instagram.com",
+        Name: "instagram",
+        Url: "https://www.instagram.com",
         Icon: RiInstagramFill
       }
     ]
   },
   {
-    Name:"nombre random",
-    Image:"https://i.pinimg.com/564x/25/86/f2/2586f23530da330c9aa20a0ae993a067.jpg",
-    Position:"Developer",
-    Description:"Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) ",
-    SocialMedia:[
+    Id: 3,
+    Name: "nombre random",
+    Image: "https://i.pinimg.com/564x/25/86/f2/2586f23530da330c9aa20a0ae993a067.jpg",
+    Position: "Developer",
+    Description: "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) ",
+    SocialMedia: [
       {
-        Name:"facebook",
-        Url:"https://www.facebook.com",
+        Name: "facebook",
+        Url: "https://www.facebook.com",
         Icon: RiFacebookBoxFill
       },
       {
-        Name:"instagram",
-        Url:"https://www.instagram.com",
+        Name: "instagram",
+        Url: "https://www.instagram.com",
         Icon: RiInstagramFill
       }
     ]
   },
   {
-    Name:"nombre random",
-    Image:"https://i.pinimg.com/564x/25/86/f2/2586f23530da330c9aa20a0ae993a067.jpg",
-    Position:"Developer",
-    Description:"Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) ",
-    SocialMedia:[
+    Id: 4,
+    Name: "nombre random",
+    Image: "https://i.pinimg.com/564x/25/86/f2/2586f23530da330c9aa20a0ae993a067.jpg",
+    Position: "Developer",
+    Description: "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) ",
+    SocialMedia: [
       {
-        Name:"facebook",
-        Url:"https://www.facebook.com",
+        Name: "facebook",
+        Url: "https://www.facebook.com",
         Icon: RiFacebookBoxFill
       },
       {
-        Name:"instagram",
-        Url:"https://www.instagram.com",
+        Name: "instagram",
+        Url: "https://www.instagram.com",
         Icon: RiInstagramFill
       }
     ]

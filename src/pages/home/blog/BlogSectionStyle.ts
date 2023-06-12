@@ -9,6 +9,7 @@ position: relative;
   align-content: center;
   min-height: 100vh;
   width: 100vw;
+  padding-top: 60px;
 
   .icon-navigate {
     font-size: 2.5em;
@@ -24,7 +25,7 @@ position: relative;
     }
   }
 
-  .blogs-container {
+  .blog-list-container {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
@@ -32,16 +33,16 @@ position: relative;
     max-width: 1000px;
   }
 
-  .blog-list{
-    display: flex;
-  }
+
 
   .blog-item {
     //overflow: hidden;
-    display: flex;
+    
+        display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    text-align:center;
 
     grid-column: 1fr;
     position: relative;
@@ -52,7 +53,6 @@ position: relative;
     width: 100%;
     text-align: center;
     font-weight: bold;
-    font-size: 1.5em;
     font-family: "Abril Fatface";
   }
 
@@ -64,6 +64,7 @@ position: relative;
   }
 
   .blog-item-text {
+    padding:10px;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -83,7 +84,6 @@ position: relative;
   }
 
   .blog-image-container {
-    font-size: 0.85em;
     padding: 10%;
     display: flex;
     justify-content: center;
@@ -106,7 +106,6 @@ position: relative;
     //border-radius: 5px;
   }
   .blog-content {
-    font-size: 0.75em;
     display: -webkit-box;
     -webkit-line-clamp: 3; /* ajusta el número de líneas que deseas mostrar */
     -webkit-box-orient: vertical;
@@ -115,7 +114,6 @@ position: relative;
 
   .section-title-text {
     text-align: left;
-    font-size: 4em;
   }
 
   .line-horizontal {
@@ -129,7 +127,47 @@ position: relative;
 
   .section-title-description {
     width: 60%;
-    font-size: 0.85em;
     text-align: left;
   }
+
+  
+  @media screen and (max-width: 600px) {
+      .blog-list-container {
+        width: 100%;
+
+  }
+  .blog-list{
+    padding:20px;
+    width: 100%;
+    display:grid;
+    gap:20px
+  }
+  .blog-item{
+    padding:20px;
+overflow:hidden;
+  }
+  .blog-image-container{
+    position:absolute
+  }
+    }
+  
+    @media screen and (min-width: 601px) and (max-width: 1200px) {
+      .blog-list-container {
+        width: 100%;
+
+  }
+  .blog-list{
+    display: grid;
+    grid-template-columns: 1fr  1fr;
+    
+  }
+    }
+  
+    @media screen and (min-width: 1201px) {
+      .blog-list{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+  }
+    }
 `;

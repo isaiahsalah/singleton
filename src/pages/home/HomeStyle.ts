@@ -1,4 +1,4 @@
-import { Color, FontSize } from "../../utils/Config";
+import { Color } from "../../utils/Config";
 import styled from 'styled-components'
 
 export const HomeBox = styled.div`

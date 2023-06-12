@@ -5,7 +5,8 @@ export const GlobalStyle = createGlobalStyle`
 
 :root {
 
-  font-family:Rubik;
+  //font-family:Rubik;
+  font-family:Lato;
   line-height: 1.5;
   font-weight: 400;
 
@@ -21,6 +22,9 @@ export const GlobalStyle = createGlobalStyle`
 
   overflow-x: hidden;
 }
+.app{
+        visibility:hidden; 
+    }
 body::-webkit-scrollbar{
         width: 0px;
     }
@@ -35,13 +39,15 @@ body::-webkit-scrollbar{
     a {
   text-decoration: inherit;
   color: ${Color.alternative};
-  opacity: 0.4;
+  opacity: 0.75;
+  transition: 0.15s;
   //color: #8491A0;
  
 }
 a:hover {
   opacity: 1;
       filter: drop-shadow(0 0 1.5em ${Color.alternative});
+      transform: scale(1.02);
     }
 
 body {
@@ -52,50 +58,38 @@ body {
   min-height: 100vh;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
+
+
 
 button {
-  border-radius: 5px;
-  border: 1px solid  ${Color.alternative};
-  padding: 0.4em 1.2em;
+  display: flex;
+  align-items: center;
+  gap:10px;
+  border-radius: 100px;
+  border: 1px solid  ${Color.active};
+  padding: 12px 24px;
   font-size: .9em;
   font-weight: 500;
   font-family: inherit;
-  background-color: transparent;
+  background-color: ${Color.active};
   color: ${Color.alternative};
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
 
   cursor: pointer;
   transition: 0.25s;
 }
 button:hover {
   background-color: ${Color.alternative};
-  color: ${Color.secondary};
+  color: ${Color.active};
   border-color: ${Color.alternative};
+  filter: drop-shadow(0 0 1.5em ${Color.alternative}4d);
+
 }
 button:focus,
 button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  //outline: 4px auto -webkit-focus-ring-color;
 }
 
-.title-section-back{
-  position: absolute;
-  top: 0;
-  font-size:150px;
-  opacity: 0.05;
-  font-family: "Abril Fatface";
-}
-/*
-.section-title{
-  display: grid;
-  width: 100%;
-      text-align: center;
-      justify-content: center;
-    margin: 100px 0 50px 0;
-    gap: 20px;
-}*/
 
 
 .abril{
@@ -104,9 +98,10 @@ button:focus-visible {
 img{
   border-radius: 3px;
 }
-h1, h2, h3, h4, h5, p{
+h1, h2, h3, h4, h5,h6 , p{
   margin: 0;
   padding:0;
+  font-weight: normal;
 }
 
   .line-short,
@@ -137,42 +132,67 @@ h1, h2, h3, h4, h5, p{
    }
 
    .title-section-container{
-      padding: 50px 0;
+    /*transform: translate(-50%, 0%);    
+    left: 50%;
+    top: 0;*/
+    max-width: 1200px;
+    width: 100%;
       display:flex;
-      width: 100%;
-      align-items: center;
-      gap: 20px;
-      
+      padding-inline: 20px;
+      box-sizing: border-box;
+      z-index: 5;
    }
    .section-title{
+    font-weight: normal;
       line-height:1;
       white-space: nowrap;
+      padding: 12px 24px;
+      background-color: ${Color.alternative}1a;
+      border-radius:0 0 10px 10px;
+      border: 1px solid ${Color.alternative};
+      border-top: 0;
+      color: ${Color.alternative};
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+
+
    }
 
+   ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+   }
 
+   img, video{
+    user-select: none;
+   }
   
   @media screen and (max-width: 600px) {
+    .title-section-container{
+      justify-content: center;
+
+    }
   
 h1 {
   font-size: 70px;
 }
 h2 {
-  font-size: 60px;
+  font-size: 55px;
 }
 h3 {
-  font-size: 50px;
-}
-h4 {
   font-size: 40px;
 }
-h5 {
+h4 {
   font-size: 30px;
 }
+h5 {
+  font-size: 25px;
+}
 h6 {
-  font-size: 20px;
+  font-size: 16px;
 }
 p{
-  font-size: 12px;
+  font-size: 13px;
 }
   }
 
@@ -181,46 +201,46 @@ p{
   font-size: 80px;
 }
 h2 {
-  font-size: 70px;
+  font-size: 65px;
 }
 h3 {
-  font-size: 60px;
-}
-h4 {
   font-size: 50px;
 }
-h5 {
+h4 {
   font-size: 40px;
 }
+h5 {
+  font-size: 28px;
+}
 h6 {
-  font-size: 25px;
+  font-size: 17px;
 }
 p{
-  font-size: 13px;
+  font-size: 14px;
 }
   }
 
   @media screen and (min-width: 1201px) {
     h1 {
-  font-size: 100px;
+  font-size: 90px;
 }
 h2 {
-  font-size: 80px;
+  font-size: 75px;
 }
 h3 {
-  font-size: 70px;
-}
-h4 {
   font-size: 60px;
 }
-h5 {
+h4 {
   font-size: 45px;
 }
-h6 {
+h5 {
   font-size: 30px;
 }
+h6 {
+  font-size: 18px;
+}
 p{
-  font-size: 14px;
+  font-size: 15px;
 }
   }
 /*
